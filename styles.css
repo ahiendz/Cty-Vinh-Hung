@@ -1,0 +1,214 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 50%; /* This will take up 2/4 of the screen width */
+  margin: 0 auto; /* This will center the container */
+  padding: 0 15px;
+}
+
+/* Top bar styles */
+.top-bar {
+  background-color: #2e7d32;
+  color: white;
+  padding: 5px 0;
+  text-align: left;
+}
+.top-bar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+/* Main header styles */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  max-width: 125px;
+  margin-right: 10px;
+}
+.company-info h1 {
+  margin: 0;
+  font-size: 35px;
+  color: blue;
+}
+.company-info h2 {
+  margin: 5px 0 0;
+  text-align: center;
+  font-size: 25px;
+  color: red;
+}
+
+/* Search bar styles */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+.search-bar input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+/* Menu styles */
+.menu {
+  background-color: #2e7d32;
+  text-align: center; /* Center the menu items */
+}
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex; /* This will make the menu items inline and centered */
+}
+.menu li {
+  position: relative;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+}
+.menu a:hover {
+  background-color: #1b5e20;
+}
+
+/* Dropdown styles */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: left; /* Align dropdown text to the left */
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Ensure dropdowns are hidden by default */
+.menu .dropdown > .dropdown-content {
+  display: none;
+}
+
+/* Show dropdowns only on hover */
+.menu .dropdown:hover > .dropdown-content {
+  display: block;
+}
+
+/* Mobile menu styles */
+.mobile-menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+.mobile-menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search-bar {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .menu ul {
+    flex-direction: column;
+  }
+  .dropdown-content {
+    position: static;
+    display: none;
+    background-color: #1b5e20;
+    padding-left: 20px;
+  }
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+}
+
+/* Footer styles */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  background-color: #2e7d32;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
